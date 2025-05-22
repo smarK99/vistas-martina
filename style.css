@@ -9,3 +9,20 @@
 .card{
     background: #f9aaaa;
 }
+
+.product-card {
+      width: 14rem;
+      height: 100%;
+      border: 2px rgb(255, 0, 0);
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+.product-card img {
+      height: 180px;
+      object-fit: cover;
+}
+.price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #212529;
+}
