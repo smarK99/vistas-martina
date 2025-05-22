@@ -1,0 +1,11 @@
+.navbar{
+    width: 100%;
+}
+
+.bg-body-tertiary{
+    background-color: rgb(212, 42, 42) !important;
+}
+
+.card{
+    background: #f9aaaa;
+}
