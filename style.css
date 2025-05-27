@@ -3,26 +3,79 @@
 }
 
 .bg-body-tertiary{
-    background-color: rgb(212, 42, 42) !important;
+    background-color:#dc3545 !important;
 }
 
 .card{
     background: #f9aaaa;
 }
 
+/* Fade-in inicial */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .product-card {
       width: 14rem;
       height: 100%;
-      border: 2px rgb(255, 0, 0);
       border-radius: 12px;
       box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    }
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+      border: 2px solid transparent;
+      overflow: hidden;
+      opacity: 1;
+      transform: translateY(0);
+      animation: fadeIn 0.4s ease;
+      animation-delay: var(--fade-delay);
+}
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #dc3545;
+    cursor: pointer;
+}
+
 .product-card img {
       height: 180px;
+      width: 100%;
+      transition: transform 0.3s ease;
+      transform: scale(1.05);
       object-fit: cover;
 }
+
 .price {
       font-size: 1.2rem;
       font-weight: bold;
       color: #212529;
+}
+
+.rounded-circle{
+    border: 1px black;
+}
+
+button:hover {
+      transform: scale(1.1);
+}
+
+.pedido-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    background-color: #e4bfbf; /* tono rosado suave */
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeIn 0.4s ease;
+    animation-delay: var(--fade-delay);
+}
+
+.pedido-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(255, 99, 133, 0.3);
+    cursor: pointer;
+}
+
+.pedido-header {
+    color: #dc3545; /* rojo Bootstrap */
+    font-weight: 600;
 }
