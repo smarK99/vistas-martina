@@ -42,7 +42,12 @@
             <li class="nav-item">
               <a class="nav-link active" href="./informes.html">Informes</a>
             </li>
-            <!-- <li class="nav-item dropdown">
+            <!-- 
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Pedidos</a>
+            </li>
+            
+            <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Opciones
@@ -74,8 +79,24 @@
     </nav>
   </div>
 
-  <div class="container py-5">
-    <h2 class="mb-4 text-center">Últimos Pedidos</h2>
+  <div class="container my-4">
+    <div class="d-none d-sm-flex justify-content-center gap-2 animate-fade-in">
+        <!-- Pantallas grandes (desde sm para arriba) -->
+        <button class="btn btn-outline-danger custom-btn">ABM Estado Pedido</button>
+        <!-- <button class="btn btn-outline-danger custom-btn"></button> -->
+    </div>
+
+    <div class="d-flex d-sm-none flex-nowrap overflow-auto gap-2 animate-fade-in">
+        <!-- Pantallas pequeñas (menores a sm) -->
+        <button class="btn btn-outline-danger custom-btn flex-shrink-0">ABM Estado Pedido</button>
+    </div>
+    <hr>
+</div>
+
+  
+
+  <div class="container">
+    <!-- <h2 class="mb-4 text-center">Últimos Pedidos</h2> -->
 
     <!-- Lista de pedidos -->
     <div class="card mb-3 pedido-card" style="--fade-delay: 0s;">
